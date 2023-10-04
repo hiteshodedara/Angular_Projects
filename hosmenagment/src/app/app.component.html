@@ -1,0 +1,14 @@
+<div class="card mx-2 my-2 bg-primary">
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">User Name</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Name" [(ngModel)]="name2">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"[(ngModel)]="email">
+    </div>
+
+    <input type="button"(click)="onclick()" value="submit">
+  </div>
+</div>
