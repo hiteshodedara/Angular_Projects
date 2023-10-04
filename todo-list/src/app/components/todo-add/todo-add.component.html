@@ -1,0 +1,18 @@
+<h3>Add Todos</h3>
+<div class="card my-3">
+  <div class="card-body">
+    <form (ngSubmit)="onsubmit()">
+      <div class="mb-1">
+        <label for="exampleInputEmail1" class="form-label">Todo TItle</label>
+        <input type="text" [(ngModel)]="title" class="form-control" id="title" name="title">
+      </div>
+      <div class="mb-3 ">
+        <label for="exampleInputPassword1" class="form-label">Todo Description</label>
+        <input type="text" class="form-control" [(ngModel)]="desc" id="desc" name="desc">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Add Todo</button>
+    </form>
+  </div>
+</div>
+<br>
