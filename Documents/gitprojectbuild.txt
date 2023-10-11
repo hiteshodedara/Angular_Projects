@@ -1,0 +1,1 @@
+ng b --output-path docs --base-href /projectnameingithub/
