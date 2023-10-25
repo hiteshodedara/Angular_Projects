@@ -6,15 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public uid=0;
-  public uname="hitesh"
-  public pass=true;
-  public itype="text";
 
-
-
+  title = 'practice-project';
+showPassword: boolean=false;
+showPassword2: boolean=false;
 
 
   
-  title = 'practice-project';
+
 }

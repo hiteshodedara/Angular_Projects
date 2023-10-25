@@ -1,9 +1,87 @@
-.text-danger{
-    color: red;
+/* Basic Form Styling */
+.maindiv {
+  padding-top: 80px;
 }
-.text-success{
-    color: rgb(44, 168, 56);
-}
-.text-primary{
-    color: rgb(29, 79, 216);
-}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Input Styling */
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  form input {
+    /* width: 100%; */
+    padding: 4px;
+    border: 1px solid #ccc;
+    font-size: 1.3em;
+    border-radius: 4px;
+  }
+  
+  /* Submit Button Styling */
+  form button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Optional: Add some spacing between elements */
+  form div:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .passworddiv {
+    display: flex;
+    justify-content: flex-end ;
+    padding: 5px;
+    padding-right: 0%;
+  }
+  
+  .pwd { 
+    padding: 8px;
+    border-radius: 4px;
+    width: 90% !important;
+  }
+  .checkbox{
+    
+      width: 10%;
+     
+  }
+  #username{
+    width: 100%;
+  }
+  #email{
+    width: 100%;
+  }
+  #age{
+    width: 100%;
+  }
+  #confirmPassword{
+    width: 100%;
+  }
+  
+ .buttondiv{
+  display: flex;
+  justify-content: flex-end;
+ }
+  
+  
