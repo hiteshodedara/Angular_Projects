@@ -1,0 +1,73 @@
+<div class="search">
+  <input class="inputbox" type="text"><button class="text-btn" (click)="onclick()">Search</button>
+</div>
+
+<div class="containar" >
+  <div class="upper-data">
+    <img src="../assets/hot.jpg" *ngIf="wetherdata1.is_day=='1'" alt="hot image">
+    <img src="../assets/cold.jpg" *ngIf="wetherdata1.is_day=='2'" alt="cold image">
+    
+    <div class="wether-data">
+      
+      <div class="location">{{wetherdata1.cityname}}</div>
+      <div class="temperature">{{wetherdata1.temp}}°C</div>
+      <div class="location">{{wetherdata1.time}}</div>
+    </div>
+  </div>
+  <div class="lower-data">
+    <div class="more-info-lable">
+      More Informaion
+    </div>  
+    <div class="more-info-containar">
+      
+      
+      <div class="info-block">
+        <div class="info-block-lable">
+          <img src="../assets/water_drop.png" alt="cold image">
+          <span>Humidity</span>
+        </div>
+        <div class="info-block-value">
+          {{wetherdata1.humidity}}%
+        </div>
+      </div>
+
+
+      <div class="info-block">
+        <div class="info-block-lable">
+          <img src="../assets/weather_wind_air_clouds_sky_icon_189093 (1).png" alt="hot image">
+          <span>Wind</span>
+        </div>
+        <div class="info-block-value">
+          {{wetherdata1.wind_speed}} km/h
+        </div>
+      </div>
+
+
+      <div class="info-block">
+        <div class="info-block-lable">
+          <img src="{{wetherdata1.clude.img}}" alt="hot image">
+          <span>Clouds</span>
+        </div>
+        <div class="info-block-value">
+          {{wetherdata1.clude.type}}
+        </div>
+      </div>
+
+
+      <div class="info-block">
+        <div class="info-block-lable">
+          <img src="../assets/pressure_3151.png" alt="hot image">
+          <span>Pressure</span>
+        </div>
+        <div class="info-block-value">
+          {{wetherdata1.pressure}} Pa
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

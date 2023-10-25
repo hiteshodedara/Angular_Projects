@@ -1,0 +1,72 @@
+
+<div class="main-body" *ngIf="showmaincard">
+    <div class="min-body">
+         <div class="containt">
+            <div class="title">
+                <label id="info"><b>User Information</b></label>
+            </div>
+            <div class="image">
+                <img src="{{userinfo.pic}}" alt="userinfo">
+            </div>
+
+            <div class="userinfoditail card">
+                <div class="card-body">
+                    <label id="mobile"><b>Name: {{userinfo.uname.title}}.{{userinfo.uname.firstname}} {{userinfo.uname.lastname}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>Age: {{userinfo.age}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>gender: {{userinfo.gender}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>Mobile: {{userinfo.pnumber}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>Email: {{userinfo.email}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>Address: {{userinfo.address.city}} ({{userinfo.address.contry}} - {{userinfo.address.pincode}})</b></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btn-body">
+    <button (click)="onclick()">Refresh</button>
+    <button (click)="onclickadd()">Add</button>
+</div>
+<div class="main-body" *ngIf="showsubcard">
+    <div class="min-body" >
+         <div class="containt" >
+            <div class="title">
+                <label id="info"><b>User Information</b></label>
+            </div>
+            <div class="image">
+                <img src="{{test1.pic}}" alt="userinfo">
+            </div>
+
+            <div class="userinfoditail card">
+                <div class="card-body">
+                    <label id="mobile"><b>Name: {{test1.uname.title}}.{{test1.uname.firstname}} {{test1.uname.lastname}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>Age: {{test1.age}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>gender: {{test1.gender}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>Mobile: {{test1.pnumber}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>Email: {{test1.email}}</b></label>
+                </div>
+                <div class="card-body">
+                    <label id="mobile"><b>Address: {{test1.address.city}} ({{test1.address.contry}} - {{test1.address.pincode}})</b></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
