@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { weathermodel } from '../models/weather.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
 
 
@@ -14,8 +15,8 @@ export class WeatherService {
 
   public wdata!:weathermodel;
 
-  private apiKey = "66d4c3ad5aac4a7688c124820232310";
-  private apiUrl = 'https://api.weatherapi.com/v1/current.json';
+  private apiKey = environment.apikey;
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 

@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     temp: '',
     humidity: '',
     wind_speed: '',
-    is_day: '',
+    is_day: 0,
     time: '',
     pressure: '',
     clude: {
@@ -39,9 +39,11 @@ export class AppComponent implements OnInit {
 
     try {
       this.wetherdata1 = await this.weaterservice.getweatherdata('india');
-      console.log(this.wetherdata1);
+      // console.clear();
+      console.log('India:',this.wetherdata1);
 
     } catch (error) {
+      // console.clear();
       console.error('Error fetching weather data:', error);
     }
   }
@@ -58,12 +60,15 @@ export class AppComponent implements OnInit {
     if (inputElement) {
       const inputValue = inputElement.value;
       const imp = inputValue;
-      console.log(imp)
+      
       try {
+        console.clear();
+        console.log(imp)
         this.wetherdata1 = await this.weaterservice.getweatherdata(imp);
-        console.log(this.wetherdata1);
+        console.log(imp,this.wetherdata1);
 
       } catch (error) {
+        console.clear();
         console.error('Error fetching weather data:', error);
       }
 
