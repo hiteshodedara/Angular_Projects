@@ -1,0 +1,101 @@
+.intro-content {
+    border: 3px solid black;
+    padding: 10px;
+
+}
+
+.col-twelve {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+.col-twelve h5 {
+    font-size: 60px;
+    font-weight: bolder;
+
+    overflow: hidden;
+    transition: 1s;
+
+    white-space: nowrap;
+}
+
+.name {
+    display: flex;
+}
+
+.col-twelve h1 {
+    font-size: 100px;
+}
+
+@keyframes mymove {
+    0% {
+        background: linear-gradient(#0074D9, #7FDBFF);
+    }
+
+    10% {
+        background: linear-gradient(#6A1B9A, #FF007F);
+    }
+
+    20% {
+        background: linear-gradient(#2ECC40, #FFDC00);
+    }
+
+    30% {
+        background: linear-gradient(#39CCCC , #00BFFF);
+    }
+
+    40% {
+        background: linear-gradient(#FF4136 , #FF851B);
+    }
+
+    50% {
+        background: linear-gradient(#FF851B , #FFDC00);
+    }
+
+    60% {
+        background: linear-gradient(#FF007F , #6A1B9A);
+    }
+
+    70% {
+        background: linear-gradient(#001f3f , #6A1B9A);
+    }
+
+    80% {
+        background: linear-gradient(#FF6F61 , #6A5ACD , #836FFF);
+    }
+
+    90% {
+        background: linear-gradient(#1F1C2C , #928DAB , #1F1C2C
+        );
+    }
+
+    100% {
+        background: linear-gradient(#FF6F61 , #FFD166 , #E4E4E4);
+        transform: rotate(10000deg);
+    }
+}
+
+
+.col-twelve p span:hover {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.col-twelve p {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
