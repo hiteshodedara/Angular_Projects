@@ -1,0 +1,25 @@
+
+<div class="container row-cols-1 row-cols-md-2 g-4 my-4">
+    <div class="card " >
+        <h1>UserData</h1>
+        <div class="card-body border-primary" *ngIf="randomUser" >
+            <img [src]="randomUser.imageurl" class="img" alt="User Image" >
+            <h2 class="card-title">{{ randomUser.username.firstname }} {{ randomUser.username.lastname }}</h2>
+            <div class="card my-2 p-3 text-primary border-primary">
+                <p class="card-text">Email: {{ randomUser.email }}</p>
+                <p class="card-text">Phone: {{ randomUser.phone }}</p>
+                <p class="card-text">Age: {{ randomUser.dob.age }}</p>
+                <p class="card-text">Gender: {{ randomUser.gender }}</p>
+                <p class="card-text">Price: {{ randomUser.price |currency:'INR'|slice:0:6}}</p>
+                <p class="card-text">Birth Date: {{ randomUser.dob.date | date}}</p>
+                <p class="card-text">Address: {{ randomUser.address.city }}, {{ randomUser.address.state }}, {{ randomUser.address.country }}</p>
+            </div>
+        </div>
+    </div>
+    <button (click)="getRandomUser()" class="btn btn-success"  >{{randomUser ? 'Refresh User':'Get User'}}</button>
+    
+</div>
+<app-userlists  [item]="randomUser"></app-userlists>
+
+
+  
