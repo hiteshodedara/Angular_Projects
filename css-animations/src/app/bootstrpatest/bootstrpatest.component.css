@@ -1,0 +1,21 @@
+.navbarmenu{
+    float: right;
+}
+.navbarmenu a{
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 20%; 
+}
+.navbarmenu a:hover{
+    border-radius: 40%; 
+    background-color: #dee2e6;  
+    transition: 1s;
+}
+.navbar-brand{
+    font-size: 20px;
+    font-weight: 700;
+}
+.card{
+    margin: 20px;
+    padding: 20px;
+}

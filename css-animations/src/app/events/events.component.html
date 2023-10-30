@@ -1,0 +1,40 @@
+<div class="colorchenger">
+<h1 [style.color]="textcolor">Hello World</h1>
+
+<div class="btndiv">
+<button [style.background-color]="color[0]" (click)="updatecolor(color1.style.backgroundColor)" #color1>
+    {{color1.style.backgroundColor}}</button>
+
+<button [style.background-color]="color[1]" (click)="updatecolor(color2.style.backgroundColor)" #color2>
+    {{color2.style.backgroundColor}}</button>
+
+<button [style.background-color]="color[2]" (click)="updatecolor(color3.style.backgroundColor)" #color3>
+    {{color3.style.backgroundColor}}</button>
+
+<button [style.background-color]="color[3]" (click)="updatecolor(color4.style.backgroundColor)" #color4>
+    {{color4.style.backgroundColor}}</button>
+
+<button [style.background-color]="color[4]" (click)="updatecolor(color5.style.backgroundColor)" #color5>
+    {{color5.style.backgroundColor}}</button>
+</div>
+    <br>
+</div>
+
+<div class="inputtest">
+    <input type="{{spass?'text':'password'}}" [disabled]="disable" id="name">
+    <a [style.color]="'red'"  (click)="spass=!spass" class="passshow">{{spass?'hide':'show'}}</a>
+    <label> {{disable?'Disabled':'Not Disabled'}}</label>
+    <input type="checkbox" [(ngModel)]="disable" name="dis">
+    <!-- <button (click)="spass=!spass">{{spass?'hide':'show'}}</button> -->
+</div>
+
+<div class="title">
+    <h1 *ngIf="btn">Hello I am Hitesh</h1>
+    <button (click)="btn=!btn">{{btn?'hide':'show'}}</button>
+</div>
+
+<div class="colorchange">
+    <button ngbTooltip="I'll always open to the right" placement="right">Hover me</button>
+    <h1 [style.color]="namecolor">Hello I am Hitesh</h1>
+    <button (click)="changeColors()">Start</button>
+</div>

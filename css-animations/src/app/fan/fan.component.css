@@ -1,0 +1,153 @@
+.main{
+    display: flex;
+    /* justify-content: center; */
+    align-items: end;
+    height: 700px;
+    position: relative;
+
+}
+.godmain:hover{
+    .maindiv{
+     
+        animation: rotate 3s infinite;
+    }
+    .block1{
+        animation: animation1 3s infinite;
+    }
+    .maindiv2{
+        animation: rotate 3s infinite;
+    }
+    
+}
+.maindiv{
+    height: 300px;
+    display: flex;
+    width: 300px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 40px solid rgb(140, 0, 255);
+    z-index: 1;
+    position: relative;
+    
+}
+.maindiv2{
+    margin-left: 200px;
+    height: 300px;
+    display: flex;
+    width: 300px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 40px solid rgb(140, 0, 255);
+    z-index: 1;
+    position: relative;
+}
+.varical{
+    position: absolute;
+    border-radius: 20px;
+    width: 310px;
+    height: 50px;
+    background-color: blue;
+ 
+    
+}
+
+.varical1{
+    position: absolute;
+    border-radius: 20px;
+    width: 310px;
+    height: 50px;
+    background-color: rgb(25, 219, 230);
+    transform: rotate(30deg);
+}
+.varical2{
+    transform: rotate(60deg);
+    position: absolute;
+    border-radius: 20px;
+    width: 310px;
+    height: 50px;
+    background-color: rgb(8, 71, 133);
+}
+.horizontal{
+    border-radius: 20px;
+    position: absolute;;
+    width: 50px;
+    height: 310px;
+    background-color: rgb(3, 232, 141);
+}
+.horizontal1{
+    border-radius: 20px;
+    position: absolute;;
+    width: 50px;
+    height: 310px;
+    background-color: rgb(174, 25, 215);
+    transform: rotate(30deg);
+}
+.horizontal2{
+    transform: rotate(60deg);
+    border-radius: 20px;
+    position: absolute;
+    z-index: 0;
+    width: 50px;
+    height: 310px;
+    background-color: rgb(30, 255, 0);
+}
+.circle{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(212, 255, 0);
+    border: 2px solid black;
+    border-radius: 100%;
+}
+.circle1{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle1 h3{
+    font-size: 40px;
+    position: absolute;
+    z-index: 1;
+}
+.block1{
+    background-color: red;
+    width: 500px;
+    position: absolute;
+    transform: translateY(-200px) ;
+    z-index: 1;
+    height: 30px;
+}
+.godmain{
+    border-bottom: 20px solid brown ;
+}
+@keyframes animation1 {
+    50%{
+
+        /* transform: rotate(1000deg);  */
+    }
+    100% { 
+         transform: translateX(850px);
+         /* transform: translateX(700px); */
+         /* transform: rotate(2000deg);  */
+     }
+  }
+  @keyframes rotate {
+   
+   0%{
+
+       transform: rotate(2000deg); 
+       /* transform: rotate(1000deg);  */
+    }
+50%{ transform: translateX(850px);}
+    100% { 
+        /* transform: translateX(700px); */
+        transform: rotate(2000deg); 
+    }
+  }
