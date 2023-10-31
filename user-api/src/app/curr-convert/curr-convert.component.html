@@ -1,1 +1,16 @@
-<p>curr-convert works!</p>
+<div class="container mt-5">
+    <div class="card p-4 bg-info">
+        <div class="card-header fs-2 fw-bold">Currancey Convetor</div>
+        <div class="card-body">
+            <div class="input-group ">
+                <span class="fs-4 mx-3 ">₹</span><input type="number" class="form-control"  #inp1 [(ngModel)]="op1" (keyup)="isfocus(inp1.valueAsNumber)" >
+            </div>
+            <h3 class="my-4">Ruppes</h3>
+        <h3 class="mt-3 ">To</h3>
+        <h3 class="my-4">Doller</h3>
+        <div class="input-group">
+            <span class="fs-4 mx-3 ">$</span><input type="number" class="form-control" #inp2 [(ngModel)]="op2" (keyup)="isfocus2(inp2.valueAsNumber)">
+        </div>
+    </div>
+</div>
+</div>

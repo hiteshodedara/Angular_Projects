@@ -8,6 +8,7 @@ import { UserlistsComponent } from './user/userlists/userlists.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CurrConvertComponent } from './curr-convert/curr-convert.component';
+import { PaymentComponent } from './user/payment/payment.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { CurrConvertComponent } from './curr-convert/curr-convert.component';
     UserdtailsComponent,
     UserlistsComponent,
     CurrConvertComponent,
+    PaymentComponent,
    
   ],
   imports: [
