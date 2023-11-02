@@ -1,0 +1,40 @@
+<!-- <div class="container-fluid d-flex flex-row flex-wrap justify-content-center ">
+
+<div class="container m-4 ">
+  <div class="container w-100  d-flex justify-content-center  " *ngIf="randomUser">
+    <div class="card ">
+      <img [src]="randomUser.imageurl" class="card-img-top rounded-circle mx-auto mt-4" style="max-width: 150px;" alt="...">
+      <h2 class="text-center  mt-3">{{randomUser.username.surename}}.{{ randomUser.username.firstname }} {{ randomUser.username.lastname }}</h2>
+
+      <div class="card-body d-flex ">
+        <div class="container-fluid align-self-center ">
+        <p class="card-text fw-medium">Email: {{randomUser.email}}</p>
+        <p class="card-text fw-medium">Phone: {{randomUser.phone}}</p>
+        <p class="card-text fw-medium">Age: {{randomUser.dob.age}}</p>
+        <p class="card-text fw-medium">Gender: {{randomUser.gender}}</p>
+        <p class="card-text fw-medium">Birth Date: {{randomUser.dob.date}}</p>
+        <p class="card-text fw-medium">Address: {{ randomUser.address.city }}, {{ randomUser.address.state }}, {{ randomUser.address.country }}</p>
+        <div class="d-flex justify-content-center gap-3 ">
+          <button class="btn  btn-outline-success" (click)="getRandomUser()">
+            {{randomUser ? 'Refresh':'Get User'}}
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container-fluid  w-100 p-2">
+    <div class="container-fluid  d-flex flex-row flex-wrap gap-3">
+
+      <app-addusers [adduser]="randomUser"></app-addusers>
+      
+
+    </div>
+  </div>
+</div> -->
+
+
+<app-test-comp></app-test-comp>

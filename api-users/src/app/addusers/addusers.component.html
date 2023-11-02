@@ -1,0 +1,13 @@
+<button class="btn btn-success" (click)="storeObject()">Add User To List</button>
+<div class="card" *ngFor="let item of storedObjects">
+    <img [src]="item.imageurl" class="card-img-top w-25" alt="...">
+    <div class="card-body">
+        <p class="card-text">Name:{{item.username.surename}}.{{item.username.firstname}} {{item.username.lastname}}</p>
+        <p class="card-text">Email: {{item.email}}</p>
+        <p class="card-text">Phone: {{item.phone}}</p>
+        <p class="card-text">Age: {{item.dob.age}}</p>
+        <p class="card-text">Gender: {{item.gender}}</p>
+        <p class="card-text">Birth Date: {{item.dob.date}}</p>
+        <p class="card-text">Address: {{item.address.city}}, {{item.address.state}}, {{item.address.country}}({{item.address.pincode}})</p>
+    </div>
+</div>

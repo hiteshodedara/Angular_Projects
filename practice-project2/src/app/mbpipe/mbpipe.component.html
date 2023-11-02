@@ -1,0 +1,25 @@
+
+<div class="container py-5">
+    <div class="card py-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Value</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">InMB Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of datalist;index as i">
+                    <th scope="row">{{i}}</th>
+                    <td><label #value1>{{item.value}}</label></td>         
+                    <td><label #type>{{item.type}}</label></td>         
+                    <td><label #cmb >{{item.value|toMB:item.type}}</label></td>         
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

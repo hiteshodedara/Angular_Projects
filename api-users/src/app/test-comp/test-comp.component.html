@@ -1,0 +1,46 @@
+<!-- <div class="container p-3 ">
+    <div class="card p-2 m-4">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email Address" [(ngModel)]="userEmail">
+              </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">User Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Enter User Name" [(ngModel)]="userName">
+              </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput3" class="form-label">Phone Number</label>
+                <input type="number" class="form-control" id="exampleFormControlInput3" (keydown.Enter)="onclick($event)" placeholder="Enter Phone Number" [(ngModel)]="pNumber">
+              </div>
+              
+              <button class="btn btn-lg  btn-outline-primary  float-end mt-4" (click)="onclick($event)">Submit</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container p-3 ">
+    <div class="card p-2 m-4">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address: </label>
+                <label for="exampleFormControlInput1" class="form-label">{{userEmail}}</label>
+              </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">User Name: </label>
+                <label for="exampleFormControlInput2" class="form-label">{{userName}}</label>
+              </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput3" class="form-label">Phone Number: </label>
+                <label for="exampleFormControlInput3" class="form-label">{{pNumber}}</label>
+              </div>
+
+        </div>
+    </div>
+</div> -->
+
+
+<h4>myClick is an event on the custom ClickDirective:</h4>
+<button type="button" (myClick)="clickMessage=$event" clickable>click with myClick</button>
+{{clickMessage}}

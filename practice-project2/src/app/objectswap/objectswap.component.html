@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <div class="card my-5">
+        <div class="card-body">
+            <div class="form-check" *ngFor="let item1 of list1">
+                <input class="form-check-input" type="radio"  name="flexRadioDefault1"
+                 [id]="item1" #{{item1}} (change)="onRadioChange1(item1)">
+                <label class="form-check-label" [for]="item1">
+                    {{item1}}
+                </label>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary btn1 px-3 " (click)="ondownKey()">↓</button>
+    <button class="btn btn-primary btn1 px-3 " (click)="onupKey()">↑</button>
+    <div class="card my-5">
+        <div class="card-body">
+            <div class="form-check" *ngFor="let item2 of list2">
+                <input class="form-check-input" type="radio"  name="flexRadioDefault2"
+                    [id]="item2" (change)="onRadioChange2(item2)">
+                <label class="form-check-label" [for]="item2">
+                    {{item2}}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
