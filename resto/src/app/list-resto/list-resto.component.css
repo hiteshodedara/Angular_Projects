@@ -1,0 +1,16 @@
+.svg:hover{
+    cursor: pointer;
+}
+table{
+    border: 2px solid black;
+    text-align: center;
+}
+td{
+    border: 2px solid black;
+}
+th{
+    border: 2px solid black;
+}
+tr{
+    border: 2px solid black;
+}

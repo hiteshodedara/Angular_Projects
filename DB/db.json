@@ -1,0 +1,28 @@
+{
+  "restourants": [
+    {
+      "name": "hitesh1",
+      "email": "dadad@test.com",
+      "address": "redtvgbhjnkgvfcfcgvhbj",
+      "id": 1
+    },
+    {
+      "name": "hitesh2",
+      "email": "dadad@test.com",
+      "address": "redtvgbhjnkgvfcfcgvhbj",
+      "id": 2
+    },
+    {
+      "name": "hitesh3",
+      "email": "dadad@test.com",
+      "address": "redtvgbhjnkgvfcfcgvhbj",
+      "id": 3
+    },
+    {
+      "name": "hitesh4",
+      "email": "dadad@test.com",
+      "address": "redtvgbhjnkgvfcfcgvhbj",
+      "id": 4
+    }
+  ]
+}
