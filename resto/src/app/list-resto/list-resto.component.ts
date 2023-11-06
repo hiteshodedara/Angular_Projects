@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { RestoserviceService } from '../services/restoservice.service';
 
 
@@ -10,35 +10,38 @@ import { RestoserviceService } from '../services/restoservice.service';
 })
 export class ListRestoComponent implements OnInit {
 
-  restolist:any=[]
-  showclose:boolean=false;
-  deletedname='';
+  restolist: any = []
+  showclose: boolean = false;
+  deletedname = '';
+  Delete: string = "Delete";
+  Edit: string = "Update";
+inputtext: any;
 
 
   constructor(private rservice: RestoserviceService) {
 
   }
-  ngOnInit(){
+  ngOnInit() {
     this.rservice.getrestodata().subscribe((data) => {
-    this.restolist=data
-    })    
+      this.restolist = data
+    })
   }
 
-  ondeleteclick(id:any,rname:string){
-    
-    this.restolist = this.restolist.filter((restolist: { id: any; }) => restolist.id !== id);    
-    this.rservice.deleteresto(id).subscribe((result)=>{
+  ondeleteclick(id: any, rname: string) {
+
+    this.restolist = this.restolist.filter((restolist: { id: any; }) => restolist.id !== id);
+    this.rservice.deleteresto(id).subscribe((result) => {
       console.log(result);
-      this.showclose=true;
-      this.deletedname=rname;
+      this.showclose = true;
+      this.deletedname = rname;
     })
 
 
   }
 
-  onclose(){
-    this.showclose=false;
-    this.deletedname='';
+  onclose() {
+    this.showclose = false;
+    this.deletedname = '';
   }
 
 }

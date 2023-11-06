@@ -1,16 +1,15 @@
-img:hover{
+
+img{
     cursor: pointer;
+    width: 1.6em;
+    
 }
-table{
-    border: 2px solid black;
-    text-align: center;
+
+.imgedit{
+    margin-left: 20px;
 }
-td{
-    border: 2px solid black;
-}
-th{
-    border: 2px solid black;
-}
-tr{
-    border: 2px solid black;
+
+.tablemain{
+    background-color: rgba(255, 255, 255, 0.5)!important;
+     backdrop-filter: blur(10px);
 }

@@ -30,6 +30,9 @@ export class AddRestoComponent {
         console.error(error);
       })
       this.showalert=true;
+      setTimeout(() => {
+        this.showalert=false;
+      }, 3000);
       this.addResto.reset({})
     }else{
       console.log("enter all data"); 

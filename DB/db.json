@@ -1,28 +1,40 @@
 {
   "restourants": [
     {
-      "name": "hitesh1",
-      "email": "dadad@test.com",
-      "address": "redtvgbhjnkgvfcfcgvhbj",
+      "name": "raj pakvan",
+      "email": "raj@gmail.com",
+      "address": "rayya chowwk",
       "id": 1
     },
     {
-      "name": "hitesh2",
-      "email": "dadad@test.com",
-      "address": "redtvgbhjnkgvfcfcgvhbj",
+      "name": "hitesh dosha",
+      "email": "hitesh@gmail.com",
+      "address": "ramdevpir chowk",
       "id": 2
     },
     {
-      "name": "hitesh3",
-      "email": "dadad@test.com",
-      "address": "redtvgbhjnkgvfcfcgvhbj",
+      "name": "madvati panipuri",
+      "email": "madvati@gmail.com",
+      "address": "raj ni same",
       "id": 3
     },
     {
-      "name": "hitesh4",
-      "email": "dadad@test.com",
-      "address": "redtvgbhjnkgvfcfcgvhbj",
+      "name": "macdonal cake",
+      "email": "macdonal@cake.com",
+      "address": "movadi chowk",
       "id": 4
+    },
+    {
+      "name": "rajdhani cafe",
+      "email": "rajdhani@cafe.com",
+      "address": "movadi chowk",
+      "id": 5
+    },
+    {
+      "name": "go go cafe",
+      "email": "gobro@cafe.com",
+      "address": "rajkot upper",
+      "id": 6
     }
   ]
 }

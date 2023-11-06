@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+::-webkit-scrollbar{
+    display: none;
+}
+body {
+    background-image: url('./assets/public.avif');
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Fixed background (does not scroll with the content) */
+  }
+  

@@ -1,32 +1,43 @@
-<div class="container-fluid mt-5 border w-75 ">
-    <h1 class="text-center m-4 ">Restorant List</h1>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="showclose">
-        <strong>Deleted!</strong> {{deletedname}} Restorant Is Deleted From List
-        <button type="button" class="btn-close" (click)="onclose()"></button>
-    </div>
-    <table class="table  overflow-hidden ">
-        <thead>
-            <tr class="table-primary    ">
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Address</th>
-                <th scope="col">Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of restolist;" class="table-secondary">
-                <th scope="row">{{item.id}}</th>
-                <td #name>{{item.name}}</td>
-                <td>{{item.email}}</td>
-                <td>{{item.address}}</td>
-                <td>
+<div class="container-fluid w-75 mt-5 border rounded-5 bg-light  ">
+    
+    <div class="form-floating float-sm-start mt-5 overflow-auto focus-ring  py-1 px-1 ">
+        <input type="text" [(ngModel)]="inputtext" class="form-control" id="floatingInput" placeholder="name@example.com">
+        
+        <label for="floatingInput"><i class="bi bi-search mx-2"></i>Search By Name</label>
+      </div>
+      
+      
+      <div class="container   overflow-auto ">
+        <h1 class="text-center  text-black fw-bold overflow-hidden  ">List Of Restorant</h1>
+        <table class="table table-light   ">
+            <thead class="  ">
+                <tr>
+                    <th scope="col" class="   ">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col" class="">Opretions</th>
+                </tr>
+            </thead>
+            <tbody class="  ">
+                <tr *ngFor="let item of restolist|filter:inputtext">
+                    <th scope="row" class=" ">{{item.id}}</th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.address}}</td>
+                    <td>
 
-                    <img src="../../assets/trash-solid.svg" (click)="ondeleteclick(item.id,item.name)"
-                        style="width: 1.3em;">
-                    <img src="../../assets/pen-to-square-solid.svg" class="px-3" style="width: 3.6em;">
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                        <img src="../../assets/delete.png" class=" imgdelete" [ngbTooltip]="Delete" placement="bottom"
+                            (click)="ondeleteclick(item.id,item.name)">
+
+                        <img src="../../assets/edit.png" routerLink="/update/{{item.id}}" class=" imgedit"
+                            [ngbTooltip]="Edit" placement="bottom">
+
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
 </div>

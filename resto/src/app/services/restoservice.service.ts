@@ -20,5 +20,11 @@ export class RestoserviceService {
   deleteresto(id:number){
     return this.https.delete(`${this.url}/${id}`)
   }
+  getonerestodata(id:number){
+    return this.https.get(`${this.url}/${id}`)
+  }
+  editeresodata(id:number,data:any){
+    return this.https.put(`${this.url}/${id}`,data)
+  }
 
 }

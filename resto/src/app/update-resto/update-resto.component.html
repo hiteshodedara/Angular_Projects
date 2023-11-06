@@ -1,1 +1,43 @@
-<p>update-resto works!</p>
+<div class="container mt-5">
+    <div class="container-fluid w-75 border rounded-5 border-white"
+        style="background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px);">
+        <div>
+            
+            <label for="arrow " class="mt-5 fw-bold border border-black rounded-4 p-2 ">
+                <img src="../../assets/arrow.png" class="" (click)="goback()" alt="arrow back" id="arrow">
+                <a href="list" class="lba "> Back</a></label>
+            <h1 class="text-center my-4 text-dark fw-bold">Edit Restaurant Details</h1>
+        </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="showalert">
+            <strong>Success!</strong> Restaurant details edited.
+            <button type="button" class="btn-close" (click)="closealert()"></button>
+        </div>
+
+        <form class="p-3" [formGroup]="editResto" (ngSubmit)="updaterestodata()">
+            <div class="form-group m-3">
+                <label for="rname" class="fw-bold text-dark"> Name</label>
+                <input type="text" required class="form-control" id="rname" placeholder="Restaurant Name"
+                    formControlName="name">
+            </div>
+
+            <div class="form-group m-3">
+                <label for="remail" class="fw-bold text-dark"> Email</label>
+                <input type="email" required class="form-control" id="remail" placeholder="Restaurant Email"
+                    formControlName="email">
+            </div>
+
+            <div class="form-group m-3">
+                <label for="raddress" class="fw-bold text-dark"> Address</label>
+                <input type="text" required class="form-control" id="raddress" placeholder="Restaurant Address"
+                    formControlName="address">
+            </div>
+
+            <div class="row">
+                <div class="col text-end">
+                    <button type="submit" class="btn btn-primary fw-bold mt-4 mx-3">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

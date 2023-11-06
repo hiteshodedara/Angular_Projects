@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent},
   {path:"add",component:AddRestoComponent},
-  {path:"update",component:UpdateRestoComponent},
+  {path:"update/:id",component:UpdateRestoComponent},
   {path:"list",component:ListRestoComponent},
 ];
 
