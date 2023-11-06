@@ -10,37 +10,37 @@ import { RestoserviceService } from '../services/restoservice.service';
 export class AddRestoComponent {
 
 
-  constructor(private rservice:RestoserviceService){}
+  constructor(private rservice: RestoserviceService) { }
 
 
-    showalert:boolean=false;
+  showalert: boolean = false;
 
-  addResto=new FormGroup({
-    name:new FormControl(''),
-    email:new FormControl(''),
-    address:new FormControl(''),
+  addResto = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    address: new FormControl(''),
   })
 
 
-  collectformdata(){
-    if(this.addResto.value.name!=='' &&this.addResto.value.email!=='' &&this.addResto.value.address!==''){
-      this.rservice.addrestodata(this.addResto.value).subscribe((result)=>{
+  collectformdata() {
+    if (this.addResto.value.name !== '' && this.addResto.value.email !== '' && this.addResto.value.address !== '') {
+      this.rservice.addrestodata(this.addResto.value).subscribe((result) => {
         console.log(result);
-      },(error)=>{
+      }, (error) => {
         console.error(error);
       })
-      this.showalert=true;
+      this.showalert = true;
       setTimeout(() => {
-        this.showalert=false;
+        this.showalert = false;
       }, 3000);
       this.addResto.reset({})
-    }else{
-      console.log("enter all data"); 
+    } else {
+      console.log("enter all data");
     }
   }
 
-  closealert(){
-    this.showalert=false;
+  closealert() {
+    this.showalert = false;
   }
 
 }

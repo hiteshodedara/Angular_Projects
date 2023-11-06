@@ -36,5 +36,37 @@
       "address": "rajkot upper",
       "id": 6
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "go go cafe",
+      "email": "gobro@cafe.com",
+      "password": "rajkot upper"
+    },
+    {
+      "name": "dipen kukadiya",
+      "email": "dipen@gmail.com",
+      "password": "dipen123",
+      "id": 2
+    },
+    {
+      "name": "raj solanki",
+      "email": "raj@gmail.com",
+      "password": "raj123",
+      "id": 3
+    },
+    {
+      "name": "dipen kukadiya",
+      "email": "dipen@gmail.com",
+      "password": "dipen",
+      "id": 4
+    },
+    {
+      "name": "vipul odedara",
+      "email": "vipul@gmail.com",
+      "password": "vipul123",
+      "id": 5
+    }
   ]
 }
