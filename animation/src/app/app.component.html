@@ -1,10 +1,13 @@
-<div class="container">
- 
-
-    <div [style.background-color]="mycolor1" class="box1"><h3>{{color1name}}</h3></div>
-    <div [style.background-color]="mycolor2" class="box1"><h3>{{color2name}}</h3></div>
-    <div [style.background-color]="mycolor3" class="box1"><h3>{{color3name}}</h3></div>
-    <div [style.background-color]="mycolor4" class="box1"><h3>{{color4name}}</h3></div>
-
-    <button (click)="onclick()">start</button>
-</div>
+<div class="maindiv" [style.background-color]="bg">
+<div class="container" >
+<div *ngFor="let cname of colorNames; let i = index">
+      <div [style.background-color]="myColors[i]" class="box1">
+        <h3>{{cname}}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="btn">
+    <button (click)="start()">Start</button>
+<button (click)="stop()">Stop</button>
+  </div>
+</div> 

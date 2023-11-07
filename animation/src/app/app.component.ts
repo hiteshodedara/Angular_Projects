@@ -1,61 +1,63 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ColorchangeService } from './services/colorchange.service';
-import { interval, take } from 'rxjs';
+import { Subscription, interval } from 'rxjs';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations:[]
 })
-export class AppComponent {
-
-  title = 'animation';
-  mycolor1 = ''
-  mycolor2 = ''
-  mycolor3 = ''
-  mycolor4 = ''
-
-  color1name=''
-  color2name=''
-  color3name=''
-  color4name=''
+export class AppComponent implements OnDestroy {
 
 
 
 
 
-  constructor(private colorService: ColorchangeService) {
- 
-    
 
-    
+myColors: string[] = [];
+  colorNames: string[] = [];
+  bg = '';
+  private intervalSubscription: Subscription | undefined;
+  private isRunning = false;
+
+  constructor(private colorService: ColorchangeService) { }
+
+  ngOnDestroy() {
+    this.stop();
   }
 
-   
-
-  onclick() {
-    interval(1000)
-      .pipe(take(20))  // Change color 20 times
-      .subscribe((item) => {
-        let color1 = this.colorService.getNextColor();
-        this.mycolor1=color1[1];
-        this.color1name=color1[0]
-        
-        let color2 = this.colorService.getNextColor();
-        this.mycolor2=color1[1];
-        this.color2name=color1[0]
-        
-        let color3 = this.colorService.getNextColor();
-        this.mycolor3=color1[1];
-        this.color3name=color1[0]
-        
-        let color4 = this.colorService.getNextColor();
-        this.mycolor4=color1[1];
-        this.color4name=color1[0]
-        
-      });
+  start() {
+    if (!this.isRunning) {
+      this.isRunning = true;
+      this.intervalSubscription = interval(1000)
+        .pipe(take(30))
+        .subscribe(() => {
+          for (let i = 0; i < 4; i++) {
+            this.colorService.getNextColor().subscribe(color => {
+              this.myColors[i] = color[1];
+              this.colorNames[i] = color[0];
+            });
+          }
+          this.colorService.getNextColor().subscribe(color => {
+            this.bg = color[1];
+          });
+        });
+    }
   }
 
-
-
+  stop() {
+    if (this.intervalSubscription) {
+      this.intervalSubscription.unsubscribe();
+      this.isRunning = false;
+    }
+  }
 }
+
+
+
+
+
+
+
