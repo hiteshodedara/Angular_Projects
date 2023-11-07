@@ -13,6 +13,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterPipe } from './pips/filter.pipe';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
 
 
 @NgModule({
@@ -24,6 +28,10 @@ import { FilterPipe } from './pips/filter.pipe';
     LoginComponent,
     RegisterComponent,
     FilterPipe,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    ErrorpageComponent,
   ],
   imports: [
     BrowserModule,

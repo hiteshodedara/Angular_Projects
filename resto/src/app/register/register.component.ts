@@ -25,10 +25,10 @@ export class RegisterComponent {
 
 
   constructor(private uservice: UserService) {
-    uservice.getalluser().subscribe((result)=>{
-      console.log(result);
+    // uservice.getalluser().subscribe((result)=>{
+    //   console.log(result);
       
-    })
+    // })
     
   }
 

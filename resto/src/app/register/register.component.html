@@ -1,37 +1,37 @@
-<div class="container mt-5">
-    <div class="container-fluid w-75 border rounded-5 border-white" style="background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px);">
-      <h1 class="text-center my-4 text-dark fw-bold">Register User</h1>
+<div class="container mt-5 placeholder-wave ">
+    <div class="container-fluid w-75 border rounded-5 border-warning-subtle " style="background-color: rgba(0, 0, 0, 0.904); backdrop-filter: blur(10px);">
+      <h1 class="text-center my-4 text-warning border-black  fw-bold overflow-auto ">Register User</h1>
   
       <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="showalert">
-        <strong>Success!</strong> Restaurant Added To The List...
+        <strong>Success!</strong> User Registered in Database...
         <button type="button" class="btn-close" (click)="closealert()"></button>
       </div>
   
       <!-- <form class="p-3" [formGroup]="addResto" (ngSubmit)="collectformdata()"> -->
       <form class="p-3" [formGroup]="registerUser" (ngSubmit)="collectformdata()">
         <div class="form-group m-3">
-          <label for="rname" class="fw-bold text-dark"> Name</label>
-          <input type="text" required class="form-control" id="uname" placeholder="User Name" formControlName="name">
+          <label for="rname" class="fw-bold text-white "> Name</label>
+          <input type="text" required class="form-control placeholder-wave " id="uname" placeholder="User Name" formControlName="name">
         </div>
   
         <div class="form-group m-3">
-          <label for="remail" class="fw-bold text-dark"> Email</label>
-          <input type="email" required class="form-control" id="uemail" placeholder="User Email" formControlName="email">
+          <label for="remail" class="fw-bold text-white "> Email</label>
+          <input type="email" required class="form-control placeholder-wave " id="uemail" placeholder="User Email" formControlName="email">
         </div>
   
         <div class="form-group m-3">
-          <label for="raddress" class="fw-bold text-dark"> Password</label>
-          <input type="password" required class="form-control" id="upass" placeholder="Password" formControlName="password">
+          <label for="raddress" class="fw-bold text-white "> Password</label>
+          <input type="password" required class="form-control placeholder-wave " id="upass" placeholder="Password" formControlName="password">
         </div>
 
         <div class="form-group m-3">
-          <label for="raddress" class="fw-bold text-dark"> Conform Password</label>
-          <input type="password" required class="form-control" id="ucpass" placeholder="Conform Password" #cpassword formControlName="cpassword">
+          <label for="raddress" class="fw-bold text-white "> Conform Password</label>
+          <input type="password" required class="form-control placeholder-wave " id="ucpass" placeholder="Conform Password" #cpassword formControlName="cpassword">
         </div>
   
         <div class="row">
           <div class="col text-end">
-            <button type="submit" class="btn btn-primary fw-bold mt-4 mx-3">Register</button>
+            <button type="submit" class=" btn btn-outline-light    bg-warning     fw-bold mt-4 mx-3">Register</button>
           </div>
         </div>
       </form>

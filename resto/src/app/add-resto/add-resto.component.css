@@ -1,0 +1,7 @@
+.custom::placeholder {
+    color: #ffffff;
+    font-weight: 700; /* Change this to the desired color */
+  }
+  .custom{
+    color: white;
+  }

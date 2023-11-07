@@ -54,7 +54,7 @@ export class UpdateRestoComponent implements OnInit {
   }
 
   goback(){
-    this.routerdata.navigateByUrl('/list');
+    this.routerdata.navigateByUrl('list');
   }
 
 }

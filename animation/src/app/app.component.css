@@ -1,0 +1,18 @@
+
+
+.container{
+    height: 90vh;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+
+
+.box1{
+    width: 30vh;
+    height: 40vh;
+    background-color: red;
+}
