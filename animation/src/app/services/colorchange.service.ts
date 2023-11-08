@@ -8,7 +8,7 @@ export class ColorchangeService {
 
   constructor(private http: HttpClient) { }
 
-  getColorInfo(rgb: string): Observable<string> {
+  getColorInfo(rgb: string){
     return this.http.get<any>(`${this.apiUrl}${rgb}`).pipe(
       map(res => res.name.value)
     );
