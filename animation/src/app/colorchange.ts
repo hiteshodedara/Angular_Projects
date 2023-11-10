@@ -1,4 +1,9 @@
+import { ElementRef } from "@angular/core";
+
 export interface Colorchange {
-    name:string;
-    color:any
+   newlocalstorr(elermr){
+    const ans=ElementRef
+    localStorage.setItem()
+    
+   }
 }
