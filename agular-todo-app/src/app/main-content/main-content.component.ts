@@ -11,39 +11,44 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class MainContentComponent implements OnInit {
 
-  blocks:any=[]
-  todos:any= [];
-  localitem:any;
-  constructor(private lservice:TodolistService,private locals:DatastoreService){
-   lservice.gettodolists().subscribe((data) => {
-     
-      data.sort((a, b) => a.index - b.index)
-     this.blocks=data.map(res=>res.name)
-    })
-   
-    this.localitem=localStorage.getItem('Todo')
-    if (this.localitem == null) {
-      this.todos = []
-    }
-    else {
-      this.todos = JSON.parse(this.localitem);
-    }
-    console.log(this.localitem);
-    
+  blocks: any;
+  dbdata: any;
+
+
+  inputdata = ''
+
+  obj = {
+    key: 'todo',
+    id: Math.random(),
+    value: ''
   }
 
-ngOnInit() {
-  
-}
+  constructor(private lservice: TodolistService, private locals: DatastoreService) {
+    lservice.gettodolists().subscribe((data) => {
+      data.sort((a, b) => a.index - b.index)
+      this.blocks = data.map(res => res)
+    })
+
+    const storedata = localStorage.getItem('TodoDB')
+    if (storedata != null) {
+      this.dbdata = JSON.parse(storedata);
+    }
+  }
+
+  ngOnInit() {
+
+  }
+
+  onaddtodo() {
+    this.obj.value = this.inputdata
+    this.dbdata.push(this.obj)
+    localStorage.setItem('TodoDB', JSON.stringify(this.dbdata))
+    this.inputdata = ''
+    window.location.reload();
+
+
+  }
 
 
 
-data:any =[]
-
-onsubmit(todo:any){
-  
-  this.data.push(todo);
-  localStorage.setItem("Todo", JSON.stringify(this.data));
- 
-}
 }

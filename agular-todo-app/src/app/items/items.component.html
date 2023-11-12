@@ -1,5 +1,21 @@
-<div class="container my-3" *ngFor="let item of items">
-    <div class="card d-flex align-self-center ">
-        <p class="pt-3 " >{{item}}</p>
+<div class="container mb-1 " *ngFor="let item of itemslist">
+    <div class="card d-flex  flex-row justify-content-between bg-primary-subtle    ">
+        <div class=" text-center d-flex align-content-center  mt-4 mx-2">
+
+            <p class="fw-bolder ">{{item.value}}</p>
+        </div>
+        <div class="op  d-flex mt-2 ">
+
+            <div class="btn mt-2">
+                <a class=" text-danger text-decoration-none deletebtn" (click)="ondelete(item.id)">X</a>
+            </div>
+
+            <div class="form mx-1 mt-2">
+                <select class="form-select " [(ngModel)]="selectedvalue" (ngModelChange)="onupdate(item.id)">
+                    <option *ngFor="let item2 of oplist" [value]="item2.key">{{item2.name}}</option>
+                </select>
+            </div>
+
+        </div>
     </div>
 </div>

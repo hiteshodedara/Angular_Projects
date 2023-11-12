@@ -1,14 +1,22 @@
 [
     {
+        "key":"todo",
         "name": "Todo",
         "index": 1
     },
     {
+        "key":"prosess",
         "name": "Prosess",
         "index": 2
     },
     {
+        "key":"complete",
         "name": "Complete",
-        "index": 2
+        "index": 3  
+    },
+    {
+        "key":"bug",
+        "name": "Bug",
+        "index": 4  
     }
 ]
