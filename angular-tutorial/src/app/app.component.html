@@ -1,30 +1,43 @@
-<div class="maindiv">
 
-  <div class="titlebar">
 
-      <div class="imgdiv">
-          <img src="../../favicon.ico" alt="">
-      </div>
-
-      <div class="titlediv">
-          <a routerLink="">Reva The AI</a>
-      </div>
-
-      <div class="menudiv">
-          <ul>
-              <li><a routerLink="home">Home</a></li>
-              <li><a routerLink="about">About</a></li>
-              <li><a routerLink="contect">Contect</a></li>
-          </ul>
-      </div>
-
-  </div>
- 
-  <div class="contant">
-      <!-- <app-home></app-home> -->
-      <!-- <app-about></app-about> -->
-      <!-- <app-contect></app-contect> -->
-      <router-outlet></router-outlet>
-  </div>
-
+<div class="container mt-4  flex ">
+    <p-button (click)="showDialog('center')" 
+    label="Update" styleClass="p-button-warning"></p-button>
+    <p-dialog  header="Update Todo" [(visible)]="visible" [position]="position" [style]="{ width: '30vw'}">
+        <form class="mt-3 ">
+            <div class="mb-3 d-flex gap-2   ">
+              <label for="exampleInputEmail1" class="form-label align-self-center text-dark ">Value</label>
+              <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+           
+            <div class="mb-3 d-flex gap-2   ">
+                <label for="exampleInputEmail1" class="form-label align-self-center text-dark ">Value</label>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </p-dialog>
 </div>
+
+
+
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>

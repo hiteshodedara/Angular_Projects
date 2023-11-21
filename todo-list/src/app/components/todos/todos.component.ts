@@ -9,7 +9,7 @@ import { Todo } from 'src/app/Todo';
 export class TodosComponent {
   todos!: Todo[];
   localitem: any;
-
+block=[1,2,3]
 
 
   constructor() {
