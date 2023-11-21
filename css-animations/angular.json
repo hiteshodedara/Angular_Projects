@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "css-animations:build:production"
+              "buildTarget": "css-animations:build:production"
             },
             "development": {
-              "browserTarget": "css-animations:build:development"
+              "buildTarget": "css-animations:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "css-animations:build"
+            "buildTarget": "css-animations:build"
           }
         },
         "test": {
