@@ -7,7 +7,7 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { ItemsComponent } from './items/items.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    ReactiveFormsModule
 
   ],
   providers: [],
