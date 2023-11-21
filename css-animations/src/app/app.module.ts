@@ -7,13 +7,15 @@ import { FanComponent } from './fan/fan.component';
 import { EventsComponent } from './events/events.component';
 import { FormsModule } from '@angular/forms';
 import { BootstrpatestComponent } from './bootstrpatest/bootstrpatest.component';
+import { NgcomsComponent } from './ngcoms/ngcoms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FanComponent,
     EventsComponent,
-    BootstrpatestComponent
+    BootstrpatestComponent,
+    NgcomsComponent
   ],
   imports: [
     BrowserModule,
